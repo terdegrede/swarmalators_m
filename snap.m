@@ -17,7 +17,10 @@ T = round(T/dt); % Scaling
 
 col = Theta(T,:); % Vector of colors
 scatter(X(T, :), Y(T, :), sz, col, 'filled')
-axis([min(X(:))-0.1 max(X(:))+0.1 min(Y(:))-0.1 max(Y(:))+0.1])
+ax_min = min(min(X(:)), min(Y(:)));
+ax_max = max(max(X(:)), max(Y(:)));
+
+axis([ax_min-0.1 ax_max+0.1 ax_min-0.1 ax_max+0.1])
 axis square
 
 %% Uncomment for exporting animations

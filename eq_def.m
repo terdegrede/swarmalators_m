@@ -24,10 +24,6 @@ for n= 1: N     % Index "i"
         end
     end
     
-    %F = 0.01*omega*t; % Slow Variation << omega
-    % F = omega*t; % 
-    F = max(5-0.0714*t, 0);%abs(5-5*t/100);
-    %F = 2*omega*t; % Fast Variation >> omega
     
     f(n)= A;
     f(N+ n)= B;
